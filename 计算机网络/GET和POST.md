@@ -1,5 +1,9 @@
 # GET 和 POST 详解
 
+![](../Resources/GET&POST.png)
+
+
+
 ## 概括
 
 - GET用于获取信息，无副作用，幂等，且可缓存
