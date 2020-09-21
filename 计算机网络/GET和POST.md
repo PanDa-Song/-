@@ -1,6 +1,6 @@
 # GET 和 POST 详解
 
-![](../Resources/GET&POST.png)
+![](https://github.com/PanDa-Song/CS-basic-notes/raw/master/Resources/GET%26POST.png)
 
 
 
