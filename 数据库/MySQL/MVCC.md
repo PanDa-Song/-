@@ -19,5 +19,13 @@ MVCC 是通过保存数据在某个时间点的快照来实现，也就是说不
 
 ## InnoDB 的MVCC
 
-InnoDB的MVCC，通过在每行记录后面保存两个隐藏的列来实现，分别是
+InnoDB的MVCC，通过在每行记录后面保存两个隐藏的列来实现，分别是 DATA_TRX_ID 和 DATA_ROLL_PTR
+
+DATA_TRX_ID：
+
+- 记录最近更新这条行记录的事务 ID，大小为 6 个字节
+
+DATA_ROLL_PTR：
+
+- 表示指向该行回滚段（rollback segment）的指针，大小为 7 个字节，InnoDB 便是通过这个指针找到之前版本的数据。该行记录上所有旧版本，在 undo 中都通过链表的形式组织。
 

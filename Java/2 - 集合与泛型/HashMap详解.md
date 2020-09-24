@@ -79,5 +79,29 @@ if ((p = tab[i = (n - 1) & hash]) == null)
 
 
 
+## 方法解析
 
+### put
+
+1. 如果HashMap未被初始化，则初始化
+
+2. 对 Key 求 Hash 值，然后计算下标
+3. 如果没有碰撞，直接放入桶中
+4. 如果碰撞了，则以链表的形式链接到后面
+5. 如果链表长度超过阈值，就把链表转换成红黑树
+6. 如果链表长度低于6，就把链表转回红黑树
+7. 如果节点存在就替换旧值
+8. 如果桶满了(capacity * loadFactor)，就需要resize（扩容两倍后重排
+
+
+
+### get
+
+通过键对象的 hashcode 通过 hash 算法找到对应 bucket 的位置，再调用keys。equals 方法找到链表中对应的节点
+
+
+
+### hash
+
+![](../Resources/hashmap.jpg)
 
