@@ -8,6 +8,7 @@
 - [进程间通信]()
 - [Linux 网络 I/O 模型]()
 - [I/O 多路复用]()
+- 死锁
 
 
 
@@ -85,6 +86,7 @@
 
 - 并发编程
 - Java 多线程基础
+- synchronized 原理
 - JUC 包
 - ThreadLocal
 - 线程池
